@@ -26,7 +26,8 @@ public class HomePage extends Utils {
 
     public void verifyAlertMsg() {
         // Capturing the Alert Msg
-        String actualAlertMsg = capturingTextFromAlert();
+        Alert alert1 = driver.switchTo().alert();
+        String actualAlertMsg = alert1.getText();
         // Accept The Alert
         acceptingAlert();
         // Verifying Alert Msg
@@ -41,8 +42,8 @@ public class HomePage extends Utils {
 
     public void verifyingVoteAlertMsg() {
         // Capturing the Alert Msg
-        Alert alert = driver.switchTo().alert();
-        String actualVoteAlertMsg = alert.getText();
+        Alert alert2 = driver.switchTo().alert();
+        String actualVoteAlertMsg = alert2.getText();
         // Accept The Alert
         acceptingAlert();
         // Verifying Alert Msg

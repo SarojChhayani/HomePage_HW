@@ -20,10 +20,8 @@ public class NewsReleasePage extends Utils {
         clickOnElement(_newComment);
         //actual test msg after click on NEW COMMENT
         String actualMsg = getTextFromElement(_actualCommentMsg);
-
         //comparing actual and expected
         Assert.assertEquals(actualMsg, loadProp.getProperty("expectedMsg"), "Your Comment Is Not Added.");
-
         // Locate the container or element that holds all the comments
         WebElement commentsContainer = driver.findElement(_commentContainer);
         // Find the last comment element within the container
